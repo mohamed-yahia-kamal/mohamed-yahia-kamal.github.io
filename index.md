@@ -25,13 +25,7 @@ I enjoy turning raw data into actionable insights to help businesses make inform
 - *Outcome:* Visual dashboards to support business decisions  
 - 🔗 [GitHub Project](#)
 
-#### 2️⃣ Project 2 name
-- *Goal:*  
-- *Tools:* Python, Scikit-learn, Logistic Regression, Random Forest  
-- *Outcome:* Achieved % prediction accuracy  
-- 🔗 [GitHub Project](#)
-
-#### 3️⃣ Project 3 name
+#### 3️⃣ Project 2 name
 - *Goal:* 
 - *Tools:* Python, Pandas, Seaborn, Plotly  
 - *Outcome:* Interactive dashboard for insights  
