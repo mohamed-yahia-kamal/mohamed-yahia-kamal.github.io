@@ -43,5 +43,5 @@ I enjoy turning raw data into actionable insights to help businesses make inform
 ### 📫 Contact Me
 - Tel:* +20 1004957788
 - *Email:* mohamed.yahia29016@gmail.com
-- *LinkedIn:* [linkedin.com/in/yourprofile](www.linkedin.com/in/mohamedyahia610)  
-- *GitHub:* [github.com/mohamed-yahia-kamal](https://github.com/mohamed-yahia-kamal)
+- *LinkedIn:* (www.linkedin.com/in/mohamedyahia610)  
+- *GitHub:* (https://github.com/mohamed-yahia-kamal)
