@@ -19,19 +19,19 @@ I enjoy turning raw data into actionable insights to help businesses make inform
 
 ### 📊 Projects
 
-#### 1️⃣ Sales Data Analysis
+#### 1️⃣ Project 1 name
 - *Goal:* Analyze sales trends and customer behavior  
 - *Tools:* Python, Pandas, Matplotlib  
 - *Outcome:* Visual dashboards to support business decisions  
 - 🔗 [GitHub Project]()
 
-#### 2️⃣ Customer Churn Prediction
+#### 2️⃣ Project 2 name
 - *Goal:* Predict which customers may leave  
 - *Tools:* Python, Scikit-learn, Logistic Regression, Random Forest  
 - *Outcome:* Achieved 85% prediction accuracy  
 - 🔗 [GitHub Project]()
 
-#### 3️⃣ COVID-19 Data Dashboard
+#### 3️⃣ Project 3 name
 - *Goal:* Collect and visualize COVID-19 data by country  
 - *Tools:* Python, Pandas, Seaborn, Plotly  
 - *Outcome:* Interactive dashboard for insights  
