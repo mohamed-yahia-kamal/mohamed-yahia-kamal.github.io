@@ -9,12 +9,11 @@ I enjoy turning raw data into actionable insights to help businesses make inform
 ---
 
 ### 🛠 Skills
-| Category | Tools |
-|----------|-------|
-| Programming | Python (Pandas, NumPy, Scikit-learn), SQL |
-| Visualization | Matplotlib, Seaborn, Power BI, Tableau |
-| Machine Learning | Regression, Classification, Clustering |
-| Other | Data Cleaning, EDA, Dashboard Creation |
+- Python (Pandas, NumPy, Scikit-learn), SQL
+- Matplotlib, Seaborn, Power BI, Tableau
+- Regression, Classification, Clustering
+- Data Cleaning, EDA, Dashboard Creation
+- Web Scraping (BeautifulSoup, Scrapy, Selenium)
 
 ---
 
