@@ -1,4 +1,4 @@
-# Mohamed Yahia
+# Mohamed Yahia Kamal
 ## Data Scientist | Data Analyst
 
 ---
@@ -23,7 +23,7 @@ I enjoy turning raw data into actionable insights to help businesses make inform
 - *Goal:* Analyze  
 - *Tools:* Python, Pandas, Matplotlib  
 - *Outcome:* Visual dashboards to support business decisions  
-- 🔗 [GitHub Project]([www.google.com](https://www.google.com/))
+- 🔗 [GitHub Project]()
 
 #### 2️⃣ Project 2 name
 - *Goal:* Predict 
