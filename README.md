@@ -20,19 +20,19 @@ I enjoy turning raw data into actionable insights to help businesses make inform
 ### 📊 Projects
 
 #### 1️⃣ Project 1 name
-- *Goal:* Analyze sales trends and customer behavior  
+- *Goal:* Analyze  
 - *Tools:* Python, Pandas, Matplotlib  
 - *Outcome:* Visual dashboards to support business decisions  
-- 🔗 [GitHub Project]()
+- 🔗 [GitHub Project](www.google.com)
 
 #### 2️⃣ Project 2 name
-- *Goal:* Predict which customers may leave  
+- *Goal:* Predict 
 - *Tools:* Python, Scikit-learn, Logistic Regression, Random Forest  
-- *Outcome:* Achieved 85% prediction accuracy  
+- *Outcome:* Achieved % prediction accuracy  
 - 🔗 [GitHub Project]()
 
 #### 3️⃣ Project 3 name
-- *Goal:* Collect and visualize COVID-19 data by country  
+- *Goal:* Collect and visualize 
 - *Tools:* Python, Pandas, Seaborn, Plotly  
 - *Outcome:* Interactive dashboard for insights  
 - 🔗 [GitHub Project]()
@@ -43,3 +43,4 @@ I enjoy turning raw data into actionable insights to help businesses make inform
 - *Email:* mohamed.yahia29016@gmail.com
 - *LinkedIn:* www.linkedin.com/in/mohamedyahia610
 - *GitHub:* [github.com/mohamed-yahia-kamal](https://github.com/mohamed-yahia-kamal)
+- *tel:* +20 1004957788
