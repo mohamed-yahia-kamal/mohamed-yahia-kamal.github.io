@@ -19,17 +19,11 @@ I enjoy turning raw data into actionable insights to help businesses make inform
 
 ### 📊 Projects
 
-#### 1️⃣ Project 1 name
-- *Goal:* 
-- *Tools:* Python, Pandas, Matplotlib  
-- *Outcome:* Visual dashboards to support business decisions  
-- 🔗 [GitHub Project](#)
-
-#### 3️⃣ Project 2 name
-- *Goal:* 
-- *Tools:* Python, Pandas, Seaborn, Plotly  
-- *Outcome:* Interactive dashboard for insights  
-- 🔗 [GitHub Project](#)
+#### 1️⃣ Student Performance Data Analysis
+- *Goal:* Explore and analyze student exam scores to uncover patterns and insights using Python.
+- *Tools:* Python, Pandas, NumPy, Matplotlib, Seaborn, Jupyter Notebook 
+- *Outcome:* Produced visualizations, descriptive statistics, and clear insights showing performance trends across subjects and student groups.
+- 🔗 [[GitHub Project](https://github.com/mohamed-yahia-kamal/student_performance_analysis)](#)
 
 ---
 
