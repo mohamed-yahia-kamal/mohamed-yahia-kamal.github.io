@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Yahia Kamal Ali - Data Scientist & Analyst</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --navy-dark: #1e3a8a;
+            --navy: #2563eb;
+            --charcoal-dark: #1f2937;
+            --charcoal: #374151;
+            --teal: #0d9488;
+            --white: #ffffff;
+            --light-gray: #f9fafb;
+            --medium-gray: #e5e7eb;
+            --dark-text: #111827;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-text);
+            overflow-x: hidden;
+        }
+        
+        /* Header Navigation */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--navy-dark);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--charcoal);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--navy);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);
+            color: var(--white);
+            padding: 120px 2rem 80px;
+            text-align: center;
+            margin-top: 60px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.8s ease;
+        }
+        
+        .hero .title {
+            font-size: 1.5rem;
+            color: var(--teal);
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.8s ease 0.2s backwards;
+        }
+        
+        .hero .tagline {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            animation: fadeInUp 0.8s ease 0.4s backwards;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 0.6s backwards;
+        }
+        
+        .btn {
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background: var(--teal);
+            color: var(--white);
+            border: 2px solid var(--teal);
+        }
+        
+        .btn-primary:hover {
+            background: transparent;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--navy);
+            transform: translateY(-2px);
+        }
+        
+        .social-links {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+        
+        .social-links a {
+            color: var(--white);
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: var(--teal);
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 80px 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--navy-dark);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: var(--charcoal);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+        
+        /* About Section */
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .about-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--charcoal);
+        }
+        
+        .highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .highlight-card {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--teal);
+            transition: transform 0.3s;
+        }
+        
+        .highlight-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .highlight-card h3 {
+            color: var(--navy-dark);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .skill-category {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .skill-category:hover {
+            transform: translateY(-5px);
+        }
+        
+        .skill-category h3 {
+            color: var(--navy-dark);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .skill-category ul {
+            list-style: none;
+        }
+        
+        .skill-category li {
+            padding: 0.5rem 0;
+            color: var(--charcoal);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .skill-category li:before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--teal);
+            font-weight: bold;
+        }
+        
+        /* Experience Section */
+        .experience-item {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--navy);
+        }
+        
+        .experience-item h3 {
+            color: var(--navy-dark);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .company {
+            color: var(--teal);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .duration {
+            color: var(--charcoal);
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+        
+        .experience-item ul {
+            margin-top: 1rem;
+        }
+        
+        .experience-item li {
+            margin-bottom: 0.5rem;
+            color: var(--charcoal);
+            line-height: 1.6;
+        }
+        
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .project-header {
+            background: linear-gradient(135deg, var(--navy-dark), var(--navy));
+            color: var(--white);
+            padding: 2rem;
+            min-height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .project-header h3 {
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        
+        .project-content {
+            padding: 2rem;
+        }
+        
+        .project-content p {
+            color: var(--charcoal);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .tech-tag {
+            background: var(--light-gray);
+            color: var(--navy-dark);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .project-link {
+            color: var(--navy);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        .project-link:hover {
+            color: var(--teal);
+        }
+        
+        .placeholder-project {
+            opacity: 0.6;
+            text-align: center;
+        }
+        
+        .placeholder-project .project-header {
+            background: linear-gradient(135deg, var(--charcoal), var(--charcoal-dark));
+        }
+        
+        /* Education Section */
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .education-card {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 10px;
+            border-top: 4px solid var(--navy);
+        }
+        
+        .education-card h3 {
+            color: var(--navy-dark);
+            margin-bottom: 1rem;
+        }
+        
+        .education-card p {
+            color: var(--charcoal);
+            margin-bottom: 0.5rem;
+        }
+        
+        .certifications {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .cert-badge {
+            background: var(--white);
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .cert-badge:hover {
+            transform: translateY(-3px);
+        }
+        
+        .cert-badge strong {
+            color: var(--navy-dark);
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background: var(--light-gray);
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .contact-item strong {
+            color: var(--navy-dark);
+            min-width: 100px;
+        }
+        
+        .contact-item a {
+            color: var(--teal);
+            text-decoration: none;
+        }
+        
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+        
+        .contact-form {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--navy-dark);
+            font-weight: 600;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid var(--medium-gray);
+            border-radius: 5px;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--navy);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .submit-btn {
+            background: var(--navy);
+            color: var(--white);
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background: var(--navy-dark);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--charcoal-dark);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        footer p {
+            margin-bottom: 1rem;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero .title {
+                font-size: 1.2rem;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header>
+        <nav>
+            <div class="logo">MY</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Mohamed Yahia Kamal Ali</h1>
+            <p class="title">Data Scientist & Analyst | Quality Assurance Professional</p>
+            <p class="tagline">Transforming quality data into actionable business insights through statistical analysis and data-driven decision making</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">Hire Me for Your Project</a>
+                <a href="#projects" class="btn btn-secondary">View My Work</a>
+            </div>
+            <div class="social-links">
+                <a href="mailto:mohamed.yahia29016@gmail.com" title="Email">✉</a>
+                <a href="https://linkedin.com/in/mohamedyahia610" target="_blank" title="LinkedIn">in</a>
+                <a href="https://github.com/mohamed-yahia-kamal" target="_blank" title="GitHub">⚡</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <p>Accomplished professional with proven expertise in leading QA teams, implementing quality management systems, and driving process improvements across complex projects. With a strong foundation in Six Sigma, TQM, Lean Manufacturing, and statistical process control, I bring a unique perspective to data science—one rooted in quality, precision, and measurable outcomes.</p>
+            
+            <p>Currently working as a Senior Quality Assurance Engineer at ELARABY GROUP, I specialize in transforming complex data into actionable insights that drive real business value. My experience spans supplier quality management, operations optimization, product quality assurance, and customer satisfaction analysis.</p>
+            
+            <p>I'm passionate about leveraging data science to solve real-world problems, particularly in quality optimization, process improvement, and predictive analytics. I combine technical expertise with strong interpersonal skills to deliver data-driven solutions that can be interpreted, measured, and monitored.</p>
+            
+            <div class="highlights">
+                <div class="highlight-card">
+                    <h3>📊 Experience</h3>
+                    <p>5+ years in Quality Assurance and Process Optimization across telecom and manufacturing industries</p>
+                </div>
+                <div class="highlight-card">
+                    <h3>🎓 Certifications</h3>
+                    <p>PMP, Data Analysis, Power BI, and Lean Six Sigma certified professional</p>
+                </div>
+                <div class="highlight-card">
+                    <h3>💡 Expertise</h3>
+                    <p>Statistical analysis, process control, data visualization, and quality management systems</p>
+                </div>
+                <div class="highlight-card">
+                    <h3>🔧 Industries</h3>
+                    <p>Strong background in telecommunications, manufacturing, and quality assurance domains</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2 class="section-title">Technical Skills</h2>
+        <p class="section-subtitle">Comprehensive toolkit for data science and quality excellence</p>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Data Science & Analysis</h3>
+                <ul>
+                    <li>Python (Pandas, NumPy, Matplotlib, Seaborn)</li>
+                    <li>SQL (Database querying and management)</li>
+                    <li>Power BI (Data visualization and dashboards)</li>
+                    <li>Statistical Analysis & Process Control</li>
+                    <li>Excel (Advanced analytics and reporting)</li>
+                    <li>Minitab (Statistical software)</li>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <h3>Quality & Process Management</h3>
+                <ul>
+                    <li>Six Sigma & Lean Manufacturing</li>
+                    <li>Total Quality Management (TQM)</li>
+                    <li>FMEA (Failure Mode and Effect Analysis)</li>
+                    <li>Statistical Process Control (SPC)</li>
+                    <li>Process Capability Analysis (Cp/Cpk)</li>
+                    <li>Root Cause Analysis & 8D Problem Solving</li>
+                    <li>SAP ERP Systems</li>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <h3>Technical & Networking</h3>
+                <ul>
+                    <li>Telecom Technologies (GSM, GPRS, UMTS, HSPA, LTE, 5G)</li>
+                    <li>Network Protocols (CCNA, CCNP certified)</li>
+                    <li>HTML & CSS (Web Development)</li>
+                    <li>RF Performance Analysis</li>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <h3>Professional Skills</h3>
+                <ul>
+                    <li>Project Management (PMP Certified)</li>
+                    <li>Team Leadership & Mentoring</li>
+                    <li>Cross-functional Collaboration</li>
+                    <li>Time Management</li>
+                    <li>Effective Communication</li>
+                    <li>Problem Solving & Critical Thinking</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <h2 class="section-title">Professional Experience</h2>
+        <p class="section-subtitle">Building excellence through quality and data-driven approaches</p>
+        
+        <div class="experience-item">
+            <h3>Senior Quality Assurance Engineer</h3>
+            <p class="company">ELARABY GROUP</p>
+            <p class="duration">October 2021 - Present</p>
+            <ul>
+                <li><strong>Supplier Quality:</strong> Conduct ISO 9001 audits, manage APQP and PPAP processes, oversee incoming quality control, and develop supplier scorecards for global supplier management</li>
+                <li><strong>Operations:</strong> Implement statistical process control, Lean Manufacturing principles, Six Sigma methodologies, and manage quality KPIs to optimize production processes</li>
+                <li><strong>Final Product:</strong> Execute final inspections, quality gate management, compliance verification, and functional testing to ensure product conformity and high first-pass yield</li>
+                <li><strong>Customer Claims:</strong> Lead 8D problem-solving initiatives, warranty analysis, field failure investigations, and cross-functional coordination to improve customer satisfaction</li>
+            </ul>
+        </div>
+        
+        <div class="experience-item">
+            <h3>Field Maintenance Engineer</h3>
+            <p class="company">Etisalat</p>
+            <p class="duration">February 2020 - April 2021</p>
+            <p>Led field teams performing preventive and corrective maintenance on multi-vendor RAN infrastructure (Huawei, Ericsson, ZTE). Managed microwave radio links, site power systems, and RF subsystems to optimize network performance and minimize MTTR while ensuring SLA-compliant availability.</p>
+        </div>
+        
+        <div class="experience-item">
+            <h3>Drive Test Engineer</h3>
+            <p class="company">Vodafone</p>
+            <p class="duration">October 2019 - January 2020</p>
+            <p>Conducted multi-technology RF drive tests (LTE/UMTS/GSM) using TEMS Investigation to evaluate network performance. Analyzed RF KPIs including RSRP, SINR, RSCP, and Ec/No to identify coverage gaps and interference issues, coordinating with optimization teams to improve overall network quality.</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 class="section-title">Data Science Projects</h2>
+        <p class="section-subtitle">Showcasing practical applications of data analysis and visualization</p>
+        
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>📊 Student Performance Analysis</h3>
+                </div>
+                <div class="project-content">
+                    <p>A comprehensive data analysis project exploring student academic performance patterns using Python. The project focuses on exam score distributions, performance comparisons across different groups, and extracting meaningful insights through exploratory data analysis.</p>
+                    
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">NumPy</span>
+                        <span class="tech-tag">Matplotlib</span>
+                        <span class="tech-tag">Seaborn</span>
+                        <span class="tech-tag">Jupyter</span>
+                    </div>
+                    
+                    <p><strong>Key Insights:</strong></p>
+                    <ul>
+                        <li>Analyzed reading, writing, and math score distributions</li>
+                        <li>Identified performance patterns through statistical analysis</li>
+                        <li>Created clear visualizations to communicate findings</li>
+                        <li>Demonstrated data cleaning and exploration capabilities</li>
+                    </ul>
+                    
+                    <div class="project-links">
+                        <a href="https://github.com/mohamed-yahia-kamal/student_performance_analysis" target="_blank" class="project-link">→ View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card placeholder-project">
+                <div class="project-header">
+                    <h3>🚀 More Projects Coming Soon</h3>
+                </div>
+                <div class="project-content">
+                    <p>Currently developing new data science projects focusing on quality analytics, predictive modeling, and business intelligence.</p>
+                </div>
+            </div>
+            
+            <div class="project-card placeholder-project">
+                <div class="project-header">
+                    <h3>🔬 Quality Analytics Dashboard</h3>
+                </div>
+                <div class="project-content">
+                    <p>Upcoming project: Interactive Power BI dashboard for manufacturing quality metrics and defect analysis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <h2 class="section-title">Education & Certifications</h2>
+        
+        <div class="education-grid">
+            <div class="education-card">
+                <h3>🎓 Bachelor of Engineering</h3>
+                <p><strong>Electronics & Communication Systems</strong></p>
+                <p>Misr University for Science and Technology</p>
+                <p>Graduated: 2016 | Grade: Very Good</p>
+                <p><strong>Graduation Project:</strong> LTE Network Planning Tool (4G) - Excellent Grade</p>
+            </div>
+        </div>
+        
+        <h3 style="margin-top: 3rem; margin-bottom: 1.5rem; color: var(--navy-dark); text-align: center;">Professional Certifications</h3>
+        <div class="certifications">
+            <div class="cert-badge">
+                <strong>PMP</strong>
+                <p>Project Management Professional</p>
+            </div>
+            <div class="cert-badge">
+                <strong>Power BI</strong>
+                <p>Data Visualization</p>
+            </div>
+            <div class="cert-badge">
+                <strong>Data Analyst</strong>
+                <p>Professional Certification</p>
+            </div>
+            <div class="cert-badge">
+                <strong>Lean Six Sigma</strong>
+                <p>Process Excellence</p>
+            </div>
+            <div class="cert-badge">
+                <strong>CCNP</strong>
+                <p>Network Professional</p>
+            </div>
+            <div class="cert-badge">
+                <strong>CCNA</strong>
+                <p>Network Associate</p>
+            </div>
+            <div class="cert-badge">
+                <strong>Web Development</strong>
+                <p>HTML & CSS</p>
+            </div>
+            <div class="cert-badge">
+                <strong>ICDL</strong>
+                <p>Computer Skills</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2 class="section-title">Let's Work Together</h2>
+        <p class="section-subtitle">Available for freelance data science and analysis projects</p>
+        
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3 style="color: var(--navy-dark); margin-bottom: 1.5rem;">Contact Information</h3>
+                
+                <div class="contact-item">
+                    <strong>Email:</strong>
+                    <a href="mailto:mohamed.yahia29016@gmail.com">mohamed.yahia29016@gmail.com</a>
+                </div>
+                
+                <div class="contact-item">
+                    <strong>Phone:</strong>
+                    <span>+20 1004957788 (Personal/WhatsApp)</span>
+                </div>
+                
+                <div class="contact-item">
+                    <strong>LinkedIn:</strong>
+                    <a href="https://linkedin.com/in/mohamedyahia610" target="_blank">linkedin.com/in/mohamedyahia610</a>
+                </div>
+                
+                <div class="contact-item">
+                    <strong>GitHub:</strong>
+                    <a href="https://github.com/mohamed-yahia-kamal" target="_blank">github.com/mohamed-yahia-kamal</a>
+                </div>
+                
+                <div class="contact-item">
