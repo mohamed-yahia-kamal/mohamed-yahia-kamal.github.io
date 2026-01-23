@@ -1,4 +1,3 @@
-# Mohamed Yahia
 ## Data Scientist | Data Analyst
 ---
 
